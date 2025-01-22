@@ -1,0 +1,29 @@
+<div class="transactions">
+  <strong style="color:#FF3835;"><div class="title">Last Anomaly </div></strong>
+  <div class="transaction-wrapper">
+    <strong style="color: #016b9c;">
+      <div class="transaction">
+        <div class="image">
+          ID
+        </div>
+        <div class="title"style="color: #016b9c;" >Date</div>
+        <div class="shop-location">
+          <div class="shop">heart rate</div>
+          <div class="location">anomaly type</div>
+        </div>
+        <div class="price">commentaire</div>
+      </div>
+    </strong>
+    <div class="transaction" *ngFor="let transaction of transactions">
+      <div class="image">
+        {{ transaction.id }} <fa-icon [icon]="dot"></fa-icon>
+      </div>
+      <div class="title">{{ transaction.timestamp }}</div>
+      <div class="shop-location">
+        <div class="shop">{{ transaction.heart_rate }}</div>
+        <div class="location">{{ transaction.anomaly_type }}</div>
+      </div>
+        <div class="price">{{ transaction.commentaire }}</div>
+    </div>
+  </div>
+</div>
