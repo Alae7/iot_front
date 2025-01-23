@@ -10,7 +10,7 @@ import { InscreptionComponent } from './inscreption/inscreption.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HestoriqueComponent } from './hestorique/hestorique.component';
 import {NgForOf} from "@angular/common";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {provideHttpClient} from "@angular/common/http";
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopWidgeComponent } from './top-widge/top-widge.component';
@@ -39,6 +39,7 @@ import {ChartModule} from "angular-highcharts";
     NgForOf,
     FormsModule,
     FontAwesomeModule,
+    ReactiveFormsModule,
     ChartModule
   ],
   providers: [

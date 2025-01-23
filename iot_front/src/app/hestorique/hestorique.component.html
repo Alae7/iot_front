@@ -3,17 +3,16 @@
   <div class="transaction-wrapper">
 
     <strong style="color: #016b9c;">
-    <div class="transaction">
-      <div class="image">
-        ID
+      <div class="transaction">
+        <div class="image">
+          ID
+        </div>
+        <div class="title"style="color: #016b9c;" >Date</div>
+        <div class="title"style="color: #016b9c;" >Heure</div>
+        <div class="price text-center">heart rate</div>
+        <div class="price text-center">anomaly type</div>
+        <div class="price1 ">commentaire</div>
       </div>
-      <div class="title"style="color: #016b9c;" >Date</div>
-      <div class="shop-location">
-        <div class="shop">heart rate</div>
-        <div class="location">anomaly type</div>
-      </div>
-      <div class="price">commentaire</div>
-    </div>
     </strong>
 
     <div class="transaction" *ngFor="let transaction of transactions">
@@ -21,11 +20,10 @@
         {{ transaction.id }} <fa-icon [icon]="dot"></fa-icon>
       </div>
       <div class="title">{{ transaction.timestamp }}</div>
-      <div class="shop-location">
-        <div class="shop">{{ transaction.heart_rate }}</div>
-        <div class="location">{{ transaction.anomaly_type }}</div>
-      </div>
-      <div class="price">{{ transaction.commentaire }}</div>
+      <div class="title">{{ transaction.heure }}</div>
+        <div class="price text-center ">{{ transaction.heart_rate }}</div>
+        <div class="price text-center">{{ transaction.anomaly_type }}</div>
+      <div class="price1 ">{{ transaction.commentaire }}</div>
     </div>
   </div>
 

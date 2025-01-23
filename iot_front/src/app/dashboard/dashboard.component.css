@@ -54,7 +54,7 @@
   display: flex;
   justify-content: space-between;
   .widget {
-    height: 250px;
+    height: 280px;
     background-color: #fff;
     border-radius: 5px;
     margin: 10px;
