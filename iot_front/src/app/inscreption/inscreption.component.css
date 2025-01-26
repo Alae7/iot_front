@@ -70,7 +70,7 @@ body {
   display: inline-block;
 }
 .form-horizontal .form-control {
-  color: #b5b5b5;
+  color: black;
   background-color: transparent;
   font-size: 14px;
   letter-spacing: 1px;
@@ -142,4 +142,88 @@ body {
   align-items: center;
   justify-content: center;
    /* Hauteur de la fenêtre */
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.form-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures full viewport height */
+  padding: 15px;
+}
+.form-container .form-icon i {
+  font-size: 100px; /* Reduced size for better proportion */
+}
+.form-horizontal .form-control {
+  padding: 8px 10px; /* Better padding for touch devices */
+}
+
+
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: linear-gradient(90deg, #ffcccc, #ffe6e6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.success-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon-container {
+  margin-right: 20px;
+}
+
+.success-icon {
+  font-size: 50px;
+  color: #ff5c5c;
+}
+
+.message-container h4 {
+  margin: 0;
+  color: #b30000;
+}
+
+.message-container p {
+  margin: 5px 0 0;
+  color: #660000;
+}
+
+.ss{
+  margin-left: auto; /* Align the button to the far right */
+  background-color: #ff5c5c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-close:hover {
+  background-color: #cc0000;
 }

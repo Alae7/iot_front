@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {WowService} from "./wow.service";
+import {faHeartPulse} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-root',
@@ -19,4 +20,5 @@ export class AppComponent implements OnInit {
     });
   }
   title = 'iot_front';
+    protected readonly heart = faHeartPulse;
 }

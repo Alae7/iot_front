@@ -177,9 +177,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.modal.show {
-  display: block;
-}
 
 .modal-dialog {
   margin: 10% auto;
@@ -189,6 +186,7 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
+
 }
 
 .close {
@@ -269,6 +267,9 @@ body {
   cursor: not-allowed;
 }
 
+
+
+
 .custom-modal .btn-primary {
   background-color: #c0392b; /* Deep red */
   border-color: #c0392b;
@@ -299,6 +300,12 @@ body {
   border-color: #2ecc71;
 }
 
+
+.error-message {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
+}
 /* Modal Size */
 .modal-lg {
   max-width: 80%;
@@ -327,3 +334,98 @@ body {
 
 
 
+.modal.show {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(20px); /* Applies the blur effect */
+  -webkit-backdrop-filter: blur(20px); /* For Safari support */
+}
+
+
+.modal-dialog {
+  margin: 10% auto;
+}
+
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: linear-gradient(90deg, #ffcccc, #ffe6e6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.success-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon-container {
+  margin-right: 20px;
+}
+
+.success-icon {
+  font-size: 50px;
+  color: #ff5c5c;
+}
+
+.message-container h4 {
+  margin: 0;
+  color: #b30000;
+}
+
+.message-container p {
+  margin: 5px 0 0;
+  color: #660000;
+}
+
+
+.ss{
+  margin-left: auto; /* Align the button to the far right */
+  background-color: #ff5c5c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-close:hover {
+  background-color: #cc0000;
+}
+
+.modal-title {
+  text-align: center;
+  width: 100%;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+.modal-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.c{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}

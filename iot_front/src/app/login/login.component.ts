@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {faUserLock} from "@fortawesome/free-solid-svg-icons";
+import {faHeartCircleCheck, faHeartPulse, faUserLock} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-login',
@@ -16,6 +16,7 @@ export class LoginComponent {
 
 
   loginForm: FormGroup;
+  loginFailed: boolean = false;
 
   constructor(private fb: FormBuilder) {
     // Initialize the form with validators for email and password
@@ -36,10 +37,14 @@ export class LoginComponent {
       const email = this.loginForm.value.email;
       const password = this.loginForm.value.password;
 
-      // Handle login logic (e.g., call a service, redirect, etc.)
-      console.log('Login Successful:', email, password);
+      // Replace the following condition with your actual login validation logic
+      if (email !== 'correct@example.com' || password !== 'correctPassword') {
+        this.loginFailed = true; // Set error to true if login is invalid
+      } else {
+        this.loginFailed = false; // Reset error if login is valid
+        console.log('Login Successful:', email, password);
+      }
     } else {
-      // Handle invalid form
       console.log('Form is invalid!');
     }
   }
@@ -96,10 +101,26 @@ export class LoginComponent {
     if (this.newPassword === this.confirmPassword && this.newPassword.length >= 6) {
       console.log(`Creating new password: ${this.newPassword}`);
       this.closeModal('newPasswordModal');
-      alert('Password changed successfully!');
+      this.showSuccessPopup = true; // Show success popup
     } else {
       console.log('Password mismatch or not valid.');
     }
   }
+
+  protected readonly heart = faHeartPulse;
+  // alert pop up
+
+  successIcon = faHeartCircleCheck;
+
+  showSuccessPopup = false; // Initialize as false
+
+
+  closePopup(): void {
+    this.showSuccessPopup = false;
+  }
+
+
+
+
 
 }

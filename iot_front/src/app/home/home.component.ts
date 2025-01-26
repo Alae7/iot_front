@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {WowService} from "../wow.service";
+import {faUserMd} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,8 @@ import {WowService} from "../wow.service";
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+
+  call = faUserMd
 
   constructor(private wowService: WowService) { }
 
